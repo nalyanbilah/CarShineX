@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarShineX | Staff Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="https://img.freepik.com/premium-vector/luxury-golden-star-logo-symbol-vector-designs-template-elegant-style-black-background_656472-183.jpg" alt="CarShineX Logo">
+                <h2>CarShineX</h2>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-avatar">
+                    <img src="https://t4.ftcdn.net/jpg/06/53/05/05/360_F_653050579_ZpydZ07ys4RhOVIBFZhBZdqDvKivlyWi.jpg" alt="User Avatar">
+                </div>
+                <div class="user-details">
+                    <h3>James Wilson</h3>
+                    <p>Senior Detailer</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#"><i class="fas fa-th-large"></i> <span>Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-calendar-alt"></i> <span>Schedule</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-tasks"></i> <span>Tasks</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chart-line"></i> <span>Performance</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-certificate"></i> <span>Certifications</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-cog"></i> <span>Settings</span></a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                
+                <div class="header-actions">
+                    <div class="notification">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="message">
+                        <i class="fas fa-envelope"></i>
+                        <span class="badge">5</span>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="dashboard-welcome">
+                <h2>Welcome back, James</h2>
+                <p>Here's your performance and scheduled tasks for today</p>
+            </div>
+            
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Today's Tasks</h3>
+                        <p class="stat-number">5</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: rgba(54, 179, 126, 0.1); color: var(--success-color);">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Completed</h3>
+                        <p class="stat-number">3</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: rgba(255, 171, 0, 0.1); color: var(--warning-color);">
+                        <i class="fas fa-spinner"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>In Progress</h3>
+                        <p class="stat-number">2</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: rgba(255, 82, 82, 0.1); color: var(--accent-color);">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Rating</h3>
+                        <p class="stat-number">4.8</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dashboard-grid">
+                <!-- Schedule Section -->
+                <section class="schedule-section">
+                    <div class="section-header">
+                        <h3>Today's Schedule</h3>
+                        <div class="section-actions">
+                            <button class="btn-outline"><i class="fas fa-filter"></i> Filter</button>
+                            <div class="dropdown">
+                                <button class="btn-outline dropdown-toggle">Today <i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="task-list">
+                        <div class="task-item">
+                            <div class="task-time">
+                                <i class="fas fa-clock"></i> 09:00 AM
+                            </div>
+                            <div class="task-details">
+                                <h4>Premium Detail - Ferrari 488</h4>
+                                <p>Complete interior and exterior detailing with ceramic coating</p>
+                                <div class="task-meta">
+                                    <span><i class="fas fa-user"></i> Client: Michael Johnson</span>
+                                    <span><i class="fas fa-hourglass-half"></i> Duration: 3h</span>
+                                </div>
+                            </div>
+                            <div class="task-status in-progress">
+                                <span>In Progress</span>
+                            </div>
+                            <div class="task-actions">
+                                <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-item">
+                            <div class="task-time">
+                                <i class="fas fa-clock"></i> 01:00 PM
+                            </div>
+                            <div class="task-details">
+                                <h4>Executive Wash - Mercedes S-Class</h4>
+                                <p>Full exterior wash, wax and interior vacuum</p>
+                                <div class="task-meta">
+                                    <span><i class="fas fa-user"></i> Client: Sarah Williams</span>
+                                    <span><i class="fas fa-hourglass-half"></i> Duration: 1.5h</span>
+                                </div>
+                            </div>
+                            <div class="task-status pending">
+                                <span>Pending</span>
+                            </div>
+                            <div class="task-actions">
+                                <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-item">
+                            <div class="task-time">
+                                <i class="fas fa-clock"></i> 03:30 PM
+                            </div>
+                            <div class="task-details">
+                                <h4>Paint Correction - BMW M4</h4>
+                                <p>Multi-stage paint correction and polish</p>
+                                <div class="task-meta">
+                                    <span><i class="fas fa-user"></i> Client: David Chen</span>
+                                    <span><i class="fas fa-hourglass-half"></i> Duration: 2h</span>
+                                </div>
+                            </div>
+                            <div class="task-status pending">
+                                <span>Pending</span>
+                            </div>
+                            <div class="task-actions">
+                                <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Performance Section -->
+                <section class="performance-section">
+                    <div class="section-header">
+                        <h3>Performance Metrics</h3>
+                        <div class="section-actions">
+                            <div class="dropdown">
+                                <button class="btn-outline dropdown-toggle">This Month <i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+                    
+                    <div class="performance-stats">
+                        <div class="perf-stat">
+                            <h4>Efficiency</h4>
+                            <p>92%</p>
+                            <span class="trend up"><i class="fas fa-arrow-up"></i> 3%</span>
+                        </div>
+                        
+                        <div class="perf-stat">
+                            <h4>Quality Score</h4>
+                            <p>4.8/5</p>
+                            <span class="trend up"><i class="fas fa-arrow-up"></i> 0.2</span>
+                        </div>
+                        
+                        <div class="perf-stat">
+                            <h4>Tasks/Day</h4>
+                            <p>4.2</p>
+                            <span class="trend down"><i class="fas fa-arrow-down"></i> 0.3</span>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Certifications Section -->
+                <section class="cert-section">
+                    <div class="section-header">
+                        <h3>Certifications & Skills</h3>
+                        <button class="btn-primary"><i class="fas fa-plus"></i> Add New</button>
+                    </div>
+                    
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h4>Professional Detailer Certification</h4>
+                                <p>International Detailing Association</p>
+                                <span class="cert-date"><i class="fas fa-calendar-alt"></i> Acquired: Jan 2022</span>
+                            </div>
+                            <div class="cert-actions">
+                                <button class="btn-icon"><i class="fas fa-pencil-alt"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h4>Ceramic Coating Specialist</h4>
+                                <p>Advanced Surface Technologies</p>
+                                <span class="cert-date"><i class="fas fa-calendar-alt"></i> Acquired: Mar 2023</span>
+                            </div>
+                            <div class="cert-actions">
+                                <button class="btn-icon"><i class="fas fa-pencil-alt"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-car-side"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h4>Exotic Vehicle Handling</h4>
+                                <p>Luxury Automotive Institute</p>
+                                <span class="cert-date"><i class="fas fa-calendar-alt"></i> Acquired: Sep 2022</span>
+                            </div>
+                            <div class="cert-actions">
+                                <button class="btn-icon"><i class="fas fa-pencil-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Feedback Section -->
+                <section class="feedback-section">
+                    <div class="section-header">
+                        <h3>Recent Feedback</h3>
+                        <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="feedback-list">
+                        <div class="feedback-item">
+                            <div class="feedback-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="date"><i class="fas fa-calendar-day"></i> Oct 15, 2023</span>
+                            </div>
+                            <p class="feedback-text">"James did an amazing job on my Ferrari. The paint correction was flawless and the ceramic coating looks spectacular."</p>
+                            <div class="feedback-client">- Michael Johnson</div>
+                        </div>
+                        
+                        <div class="feedback-item">
+                            <div class="feedback-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="date"><i class="fas fa-calendar-day"></i> Oct 12, 2023</span>
+                            </div>
+                            <p class="feedback-text">"Very thorough with the interior detailing. Would have given 5 stars but there was a slight delay in completion time."</p>
+                            <div class="feedback-client">- Jennifer Smith</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Performance Chart
+        const ctx = document.getElementById('performanceChart').getContext('2d');
+        const performanceChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                datasets: [{
+                    label: 'Tasks Completed',
+                    data: [18, 25, 22, 30],
+                    borderColor: '#FFCC00',
+                    backgroundColor: 'rgba(255, 204, 0, 0.1)',
+                    tension: 0.4,
+                    fill: true,
+                    borderWidth: 2
+                },
+                {
+                    label: 'Customer Rating',
+                    data: [4.5, 4.7, 4.6, 4.9],
+                    borderColor: '#FF6B35',
+                    backgroundColor: 'rgba(255, 107, 53, 0.1)',
+                    tension: 0.4,
+                    fill: true,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            usePointStyle: true,
+                            color: '#B0B7C3',
+                            font: {
+                                family: 'Montserrat',
+                                size: 12
+                            },
+                            padding: 20
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.05)'
+                        },
+                        ticks: {
+                            color: '#6A6A78',
+                            font: {
+                                family: 'Montserrat'
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.05)'
+                        },
+                        ticks: {
+                            color: '#6A6A78',
+                            font: {
+                                family: 'Montserrat'
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarShineX | Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="https://img.freepik.com/premium-vector/luxury-golden-star-logo-symbol-vector-designs-template-elegant-style-black-background_656472-183.jpg" alt="CarShineX Logo">
+                <h2>CarShineX</h2>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-avatar">
+                    <img src="https://www.shutterstock.com/image-photo/portrait-handsome-businessman-on-white-600nw-1664184724.jpg" alt="Admin Avatar">
+                </div>
+                <div class="user-details">
+                    <h3>Robert Anderson</h3>
+                    <p>Admin Manager</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#"><i class="fas fa-th-large"></i> <span>Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-users"></i> <span>Employees</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-calendar-alt"></i> <span>Schedules</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-tasks"></i> <span>Task Assignment</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chart-line"></i> <span>Performance</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-cog"></i> <span>Settings</span></a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search employees, tasks...">
+                </div>
+                
+                <div class="header-actions">
+                    <div class="notification">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">4</span>
+                    </div>
+                    <div class="message">
+                        <i class="fas fa-envelope"></i>
+                        <span class="badge">7</span>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="dashboard-welcome">
+                <h2>Welcome back, Robert</h2>
+                <p>Here's what's happening with your team today</p>
+            </div>
+            
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Total Staff</h3>
+                        <p class="stat-number">24</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: rgba(255, 171, 0, 0.1); color: var(--warning-color);">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Today's Tasks</h3>
+                        <p class="stat-number">18</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: rgba(54, 179, 126, 0.1); color: var(--success-color);">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Completed</h3>
+                        <p class="stat-number">12</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: rgba(255, 82, 82, 0.1); color: var(--accent-color);">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Avg. Rating</h3>
+                        <p class="stat-number">4.7</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="admin-actions">
+                <div class="admin-action-buttons">
+                    <div class="admin-action-btn">
+                        <div class="admin-action-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="admin-action-text">
+                            <h4>Add New Employee</h4>
+                            <p>Create a new staff account</p>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-action-btn">
+                        <div class="admin-action-icon">
+                            <i class="fas fa-calendar-plus"></i>
+                        </div>
+                        <div class="admin-action-text">
+                            <h4>Schedule Task</h4>
+                            <p>Assign new detailing work</p>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-action-btn">
+                        <div class="admin-action-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="admin-action-text">
+                            <h4>Generate Report</h4>
+                            <p>View detailed analytics</p>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-action-btn">
+                        <div class="admin-action-icon">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="admin-action-text">
+                            <h4>System Settings</h4>
+                            <p>Manage configurations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dashboard-grid">
+                <!-- Employee Management Section -->
+                <section class="employees-section">
+                    <div class="section-header">
+                        <h3>Team Overview</h3>
+                        <div class="section-actions">
+                            <button class="btn-outline"><i class="fas fa-filter"></i> Filter</button>
+                            <button class="btn-primary"><i class="fas fa-plus"></i> Add Employee</button>
+                        </div>
+                    </div>
+                    
+                    <div class="employee-list">
+                        <div class="employee-card">
+                            <div class="employee-cover"></div>
+                            <div class="employee-avatar">
+                                <img src="https://img.freepik.com/premium-photo/close-up-confident-male-employee-white-collar-shirt-smiling-camera-standing-self-assured-against-studio-background_1258-34815.jpg" alt="Employee Avatar">
+                            </div>
+                            <div class="employee-info">
+                                <h4 class="employee-name">James Wilson</h4>
+                                <p class="employee-position"><i class="fas fa-briefcase"></i> Senior Detailer</p>
+                                
+                                <div class="employee-meta">
+                                    <div class="meta-item">
+                                        <p class="meta-value">32</p>
+                                        <span class="meta-label">Tasks</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <p class="meta-value">4.8</p>
+                                        <span class="meta-label">Rating</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <p class="meta-value">3</p>
+                                        <span class="meta-label">Years</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="employee-actions">
+                                    <div class="employee-action">
+                                        <i class="fas fa-edit"></i>
+                                        <span>Edit</span>
+                                    </div>
+                                    <div class="employee-action">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>Schedule</span>
+                                    </div>
+                                    <div class="employee-action">
+                                        <i class="fas fa-chart-line"></i>
+                                        <span>Stats</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="employee-card">
+                            <div class="employee-cover"></div>
+                            <div class="employee-avatar">
+                                <img src="https://static4.depositphotos.com/1003556/313/i/450/depositphotos_3135076-stock-photo-young-businesswoman.jpg" alt="Employee Avatar">
+                            </div>
+                            <div class="employee-info">
+                                <h4 class="employee-name">Emily Rodriguez</h4>
+                                <p class="employee-position"><i class="fas fa-briefcase"></i> Detailing Specialist</p>
+                                
+                                <div class="employee-meta">
+                                    <div class="meta-item">
+                                        <p class="meta-value">27</p>
+                                        <span class="meta-label">Tasks</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <p class="meta-value">4.6</p>
+                                        <span class="meta-label">Rating</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <p class="meta-value">2</p>
+                                        <span class="meta-label">Years</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="employee-actions">
+                                    <div class="employee-action">
+                                        <i class="fas fa-edit"></i>
+                                        <span>Edit</span>
+                                    </div>
+                                    <div class="employee-action">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>Schedule</span>
+                                    </div>
+                                    <div class="employee-action">
+                                        <i class="fas fa-chart-line"></i>
+                                        <span>Stats</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="employee-card">
+                            <div class="employee-cover"></div>
+                            <div class="employee-avatar">
+                                <img src="https://www.shutterstock.com/image-photo/young-handsome-friendly-face-man-600nw-1684427764.jpg" alt="Employee Avatar">
+                            </div>
+                            <div class="employee-info">
+                                <h4 class="employee-name">Michael Chen</h4>
+                                <p class="employee-position"><i class="fas fa-briefcase"></i> Paint Correction Expert</p>
+                                
+                                <div class="employee-meta">
+                                    <div class="meta-item">
+                                        <p class="meta-value">45</p>
+                                        <span class="meta-label">Tasks</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <p class="meta-value">4.9</p>
+                                        <span class="meta-label">Rating</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <p class="meta-value">4</p>
+                                        <span class="meta-label">Years</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="employee-actions">
+                                    <div class="employee-action">
+                                        <i class="fas fa-edit"></i>
+                                        <span>Edit</span>
+                                    </div>
+                                    <div class="employee-action">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>Schedule</span>
+                                    </div>
+                                    <div class="employee-action">
+                                        <i class="fas fa-chart-line"></i>
+                                        <span>Stats</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Schedule Management Section -->
+                <section class="schedule-management">
+                    <div class="section-header">
+                        <h3>Schedule Management</h3>
+                        <div class="section-actions">
+                            <button class="btn-primary"><i class="fas fa-plus"></i> New Schedule</button>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-view">
+                        <div class="calendar-header">
+                            <h4 class="calendar-title">November 2023</h4>
+                            <div class="calendar-nav">
+                                <button class="calendar-nav-btn"><i class="fas fa-chevron-left"></i></button>
+                                <button class="calendar-nav-btn"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="calendar-grid">
+                            <div class="calendar-day-header">Sun</div>
+                            <div class="calendar-day-header">Mon</div>
+                            <div class="calendar-day-header">Tue</div>
+                            <div class="calendar-day-header">Wed</div>
+                            <div class="calendar-day-header">Thu</div>
+                            <div class="calendar-day-header">Fri</div>
+                            <div class="calendar-day-header">Sat</div>
+                            
+                            <div class="calendar-day other-month">
+                                <div class="calendar-day-number">29</div>
+                            </div>
+                            <div class="calendar-day other-month">
+                                <div class="calendar-day-number">30</div>
+                            </div>
+                            <div class="calendar-day other-month">
+                                <div class="calendar-day-number">31</div>
+                            </div>
+                            <div class="calendar-day">
+                                <div class="calendar-day-number">1</div>
+                                <div class="calendar-events">
+                                    <div class="calendar-event wash">Executive Wash (3)</div>
+                                </div>
+                            </div>
+                            <div class="calendar-day">
+                                <div class="calendar-day-number">2</div>
+                                <div class="calendar-events">
+                                    <div class="calendar-event detail">Premium Detail (2)</div>
+                                    <div class="calendar-event wash">Basic Wash (4)</div>
+                                </div>
+                            </div>
+                            <div class="calendar-day">
+                                <div class="calendar-day-number">3</div>
+                                <div class="calendar-events">
+                                    <div class="calendar-event repair">Paint Correction (1)</div>
+                                </div>
+                            </div>
+                            <div class="calendar-day">
+                                <div class="calendar-day-number">4</div>
+                            </div>
+                            
+                            <div class="calendar-day">
+                                <div class="calendar-day-number">5</div>
+                            </div>
+                            <div class="calendar-day">
+                                <div class="calendar-day-number">6</div>
+                                <div class="calendar-events">
+                                    <div class="calendar-event detail">Ceramic Coating (2)</div>
+                                </div>
+                            </div>
+                            <div class="calendar-day">
+                                <div class="calendar-day-number">7</div>
+                                <div class="calendar-events">
+                                    <div class="calendar-event wash">Executive Wash (5)</div>
+                                </div>
+                            </div>
+                            <div class="calendar-day">
+                                <div class="calendar-day-number">8</div>
+                            </div>
+                            <div class="calendar-day">
+                                <div class="calendar-day-number">9</div>
+                                <div class="calendar-events">
+                                    <div class="calendar-event repair">Interior Restore (2)</div>
+                                </div>
+                            </div>
+                            <div class="calendar-day today">
+                                <div class="calendar-day-number">10</div>
+                                <div class="calendar-events">
+                                    <div class="calendar-event detail">Premium Detail (3)</div>
+                                    <div class="calendar-event wash">Executive Wash (2)</div>
+                                    <div class="calendar-event repair">Paint Correction (1)</div>
+                                </div>
+                            </div>
+                            <div class="calendar-day">
+                                <div class="calendar-day-number">11</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Task Assignment Section -->
+                <section class="task-assignment">
+                    <div class="section-header">
+                        <h3>Task Assignment</h3>
+                    </div>
+                    
+                    <div class="assign-task-form">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="task-type">Service Type</label>
+                                <select id="task-type">
+                                    <option value="">Select Service Type</option>
+                                    <option value="premium">Premium Detail</option>
+                                    <option value="executive">Executive Wash</option>
+                                    <option value="paint">Paint Correction</option>
+                                    <option value="ceramic">Ceramic Coating</option>
+                                    <option value="interior">Interior Restoration</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="task-date">Date & Time</label>
+                                <input type="datetime-local" id="task-date">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="assigned-to">Assign To</label>
+                                <select id="assigned-to">
+                                    <option value="">Select Employee</option>
+                                    <option value="1">James Wilson</option>
+                                    <option value="2">Emily Rodriguez</option>
+                                    <option value="3">Michael Chen</option>
+                                    <option value="4">Sarah Thompson</option>
+                                    <option value="5">David Garcia</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="vehicle-type">Vehicle Details</label>
+                                <input type="text" id="vehicle-type" placeholder="Make, Model, Year">
+                            </div>
+                        </div>
+                            
+                            <div class="form-field">
+                                <label for="client-name">Client Information</label>
+                                <input type="text" id="client-name" placeholder="Client Name & Contact">
+                            </div>
+                            
+                            <div class="form-field">
+                                <label for="task-notes">Special Instructions</label>
+                                <textarea id="task-notes" placeholder="Any specific requirements or notes"></textarea>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button class="btn-outline">Cancel</button>
+                                <button class="btn-primary">Assign Task</button>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Settings Section -->
+                    <section class="settings-section">
+                        <div class="section-header">
+                            <h3>System Settings</h3>
+                        </div>
+                        
+                        <div class="settings-tabs">
+                            <button class="settings-tab active">General</button>
+                            <button class="settings-tab">Notifications</button>
+                            <button class="settings-tab">Scheduling</button>
+                            <button class="settings-tab">Security</button>
+                            <button class="settings-tab">Integrations</button>
+                        </div>
+                        
+                        <div class="settings-content">
+                            <div class="settings-group">
+                                <h4>General Settings</h4>
+                                
+                                <div class="settings-item">
+                                    <div class="settings-item-label">
+                                        <h5>Automatic Task Distribution</h5>
+                                        <p>Automatically assign tasks based on employee expertise and availability</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="settings-item">
+                                    <div class="settings-item-label">
+                                        <h5>Schedule Conflict Prevention</h5>
+                                        <p>Prevent scheduling conflicts by checking employee availability</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="settings-item">
+                                    <div class="settings-item-label">
+                                        <h5>Resource Allocation</h5>
+                                        <p>Automatically allocate resources based on service type</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="settings-group">
+                                <h4>Performance Monitoring</h4>
+                                
+                                <div class="settings-item">
+                                    <div class="settings-item-label">
+                                        <h5>Employee Performance Metrics</h5>
+                                        <p>Track and analyze employee performance automatically</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="settings-item">
+                                    <div class="settings-item-label">
+                                        <h5>Automated Feedback Collection</h5>
+                                        <p>Send automatic requests for client feedback after service completion</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="settings-item">
+                                    <div class="settings-item-label">
+                                        <h5>Daily Performance Reports</h5>
+                                        <p>Generate and send daily performance reports to management</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+        
+        <script>
+            // Charts and any JavaScript functionality would go here
+            // This would include event listeners, data processing, and interactive elements
+            
+            // Example for toggling settings
+            document.querySelectorAll('.toggle-switch input').forEach(toggle => {
+                toggle.addEventListener('change', function() {
+                    // In a real application, you would save this setting to the backend
+                    console.log('Setting changed:', this.checked);
+                });
+            });
+            
+            // Example for task assignment
+            document.querySelector('.btn-primary').addEventListener('click', function() {
+                // In a real application, you would save the task assignment
+                console.log('Task assigned');
+            });
+        </script>
+    </body>
+    </html>
